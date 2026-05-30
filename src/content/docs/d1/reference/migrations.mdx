@@ -84,7 +84,7 @@ Rules for `migrations_pattern`:
 
 The pattern is a standard glob — `*` matches one path segment, `**` matches any number of segments. `migrations/**/*.sql` will pick up arbitrarily deep `.sql` files.
 
-`wrangler d1 migrations create` only writes top-level files inside `migrations_dir`, so if your `migrations_pattern` only matches nested files (as with the Drizzle layout above), generate new migrations using your ORM's command (for example, `drizzle-kit generate`) instead.
+`wrangler d1 migrations create` only writes top-level files inside `migrations_dir`, so if your `migrations_pattern` only matches nested files (as with the Drizzle layout), generate new migrations using your ORM's command (for example, `drizzle-kit generate`) instead.
 
 ## Foreign key constraints
 
