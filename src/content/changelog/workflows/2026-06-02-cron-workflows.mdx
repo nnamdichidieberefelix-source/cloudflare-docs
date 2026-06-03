@@ -9,8 +9,6 @@ date: 2026-06-02 15:00:00 UTC
 
 You can now attach cron schedules directly to a Workflow binding in `wrangler.jsonc`. Each scheduled run creates a new Workflow instance automatically, so you do not need to define a separate Worker with a `scheduled` handler just to trigger your Workflow on an interval.
 
-This also allows you to run your cron triggered workloads durably, benefitting from the built-in retries, multi-step durable execution, and configurable timeouts of Workflows. 
-
 For example, you can configure hourly, every-15-minute, or weekday schedules on the same Workflow:
 
 ```jsonc
@@ -26,7 +24,7 @@ For example, you can configure hourly, every-15-minute, or weekday schedules on 
 }
 ```
 
-Then, you can run a workflow with its built-in durable execution, retries, and timeouts:
+This also allows you to run your cron triggered workloads durably, benefitting from the built-in retries, multi-step durable execution, and configurable timeouts of Workflows. 
 
 ```jsonc
 import { WorkflowEntrypoint, WorkflowEvent, WorkflowStep } from "cloudflare:workers";
